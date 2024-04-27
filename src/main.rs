@@ -2,8 +2,10 @@ use proconio::input;
 
 fn main() {
     input! {
-        n: i32
+        a: i32,
+        b: i32,
+        c: i32,
     }
 
-    println!("{}", 5 + n);
+    println!("{}", a + b + c);
 }
