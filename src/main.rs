@@ -2,17 +2,19 @@ use proconio::input;
 
 fn main() {
     input! {
-        n: usize
-    }
+        mut n: usize
+    };
 
-    let mut result = 0;
+    let mut result: String = String::new();
 
-    for _i in 0..n {
-        input! {
-            m: usize
+    while n >= 1 {
+        if n % 2 == 1 {
+            result = String::from("1") + &result;
+        } else if n % 2 == 0 {
+            result = String::from("0") + &result;
         }
 
-        result += m;
+        n /= 2;
     }
 
     println!("{}", result);
