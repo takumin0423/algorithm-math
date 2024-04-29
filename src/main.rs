@@ -1,8 +1,11 @@
-fn main() {
-    let a = 25;
-    let b = 4;
-    let c = 12;
+use proconio::input;
 
-    println!("{}", a + b + c);
-    println!("{}", a * b * c);
+fn main() {
+    input! {
+        a1: usize,
+        a2: usize,
+        a3: usize
+    }
+
+    println!("{}", a1 * a2 * a3)
 }
