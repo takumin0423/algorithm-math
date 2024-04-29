@@ -1,11 +1,20 @@
-use proconio::input;
-
 fn main() {
-    input! {
-        a1: usize,
-        a2: usize,
-        a3: usize
-    }
+    // 四則演算
+    println!("{}", 869 + 120);
+    println!("{}", 869 - 120);
+    println!("{}", 869 * 120);
+    println!("{}", 869 / 120);
 
-    println!("{}", a1 * a2 * a3)
+    // 剰余
+    println!("{}", 869 % 120);
+
+    // 絶対値
+    println!("{}", (-45i32).abs());
+    println!("{}", (20i32).abs());
+
+    // 累乗
+    println!("{}", (20i32).pow(2));
+
+    // ルート
+    println!("{}", (20.0f64).sqrt());
 }
