@@ -1,7 +1,12 @@
-fn main() {
-    println!("{}", 13 & 14);
-    println!("{}", 13 | 14);
-    println!("{}", 13 ^ 14);
+use proconio::input;
 
-    println!("{}", 8 | 4 | 2 | 1);
+fn main() {
+    input! {
+        n: usize,
+        m: [usize; n]
+    }
+
+    let sum_m = m.iter().sum::<usize>();
+
+    println!("{}", sum_m % 100);
 }
