@@ -1,19 +1,7 @@
-use proconio::input;
-
 fn main() {
-    input! {
-        n: usize
-    }
+    println!("{}", 13 & 14);
+    println!("{}", 13 | 14);
+    println!("{}", 13 ^ 14);
 
-    let mut add_result = 0;
-
-    for _i in 0..n {
-        input! {
-            m: usize
-        }
-
-        add_result += m;
-    }
-
-    println!("{}", add_result % 100);
+    println!("{}", 8 | 4 | 2 | 1);
 }
