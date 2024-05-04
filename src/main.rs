@@ -1,11 +1,8 @@
 use proconio::input;
 
 fn main() {
-    println!("{}", func1(1.0));
-    println!("{}", func1(5.0));
-    println!("{}", func1(10.0));
-}
-
-fn func1(n: f64) -> f64 {
-    n.powi(3)
+    println!("{}", 8f64.log2());
+    println!("{}", 100f64.powf(1.5));
+    println!("{}", i64::max(20, 21));
+    println!("{}", i64::min(20, 21));
 }
