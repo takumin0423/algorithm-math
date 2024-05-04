@@ -1,12 +1,19 @@
 use proconio::input;
 
 fn main() {
-    input! {
-        n: usize,
-        m: [usize; n]
-    }
+    let cnt = 1000;
 
-    let sum_m = m.iter().sum::<usize>();
+    println!("{}", func1());
+    println!("{}", func2(100, cnt));
+    println!("{}", cnt);
+}
 
-    println!("{}", sum_m % 100);
+fn func1() -> i32 {
+    return 2021;
+}
+
+fn func2(pos: i32, mut cnt: i32) -> i32 {
+    cnt += 1;
+
+    return pos + cnt;
 }
