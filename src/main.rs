@@ -1,10 +1,9 @@
 use proconio::input;
 
 fn main() {
-    println!("{}", func1(1000000.0));
-    println!("{}", 16f64.log2());
-}
+    input! {
+        n: usize
+    }
 
-fn func1(n: f64) -> f64 {
-    n.log10()
+    println!("{}", 2 * n + 3);
 }
