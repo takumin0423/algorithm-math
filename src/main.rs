@@ -3,17 +3,18 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        x: usize,
-        y: usize
+        s: usize
     }
 
-    let mut result = 0;
+    let mut count = 0;
 
     for i in 1..=n {
-        if i % x == 0 || i % y == 0 {
-            result += 1;
+        for j in 1..=n {
+            if i + j <= s {
+                count += 1;
+            }
         }
     }
 
-    println!("{}", result);
+    println!("{}", count);
 }
