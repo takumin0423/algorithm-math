@@ -5,11 +5,30 @@ fn main() {
         n: usize
     }
 
-    let mut result = 1;
+    let mut results = vec![2];
 
-    for i in 2..=n {
-        result *= i;
+    for i in 3..=n {
+        if is_prime(i) {
+            results.push(i)
+        }
     }
 
-    println!("{}", result);
+    println!(
+        "{}",
+        results
+            .iter()
+            .map(ToString::to_string)
+            .collect::<Vec<_>>()
+            .join(" ")
+    );
+}
+
+fn is_prime(x: usize) -> bool {
+    for i in 2..x {
+        if x % i == 0 {
+            return false;
+        }
+    }
+
+    return true;
 }
