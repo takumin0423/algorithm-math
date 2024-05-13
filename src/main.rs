@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use proconio::input;
 
 fn main() {
@@ -5,30 +6,11 @@ fn main() {
         n: usize
     }
 
-    let mut results = vec![2];
+    let results = (2..=n).filter(|&x| is_prime(x)).collect_vec();
 
-    for i in 3..=n {
-        if is_prime(i) {
-            results.push(i)
-        }
-    }
-
-    println!(
-        "{}",
-        results
-            .iter()
-            .map(ToString::to_string)
-            .collect::<Vec<_>>()
-            .join(" ")
-    );
+    println!("{}", results.iter().join(" "));
 }
 
 fn is_prime(x: usize) -> bool {
-    for i in 2..x {
-        if x % i == 0 {
-            return false;
-        }
-    }
-
-    return true;
+    (2..x).all(|i| x % i != 0)
 }
